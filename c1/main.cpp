@@ -35,6 +35,17 @@ int main(int argc, char* argv[])
         exit(1);
     }
 
+<<<<<<< HEAD
+    int size = 0;
+    while (1) {
+        char buffer[MAXLINE] = { 0 };
+        size = read(sockfd, buffer, MAXLINE);
+        if (size > 0) {
+            printf(buffer);
+        }
+        else {
+            break;
+=======
     while (1) {
         char buffer[MAXLINE] = { 0 };
         int size = read(sockfd, buffer, MAXLINE);
@@ -46,6 +57,7 @@ int main(int argc, char* argv[])
             // printf("read error\n");
             // break;
             sleep(1);
+>>>>>>> abf10d3896ee921d257ceefbc679da5cbaa0c27e
         }
     }
 
