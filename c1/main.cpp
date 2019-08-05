@@ -49,6 +49,7 @@ int main(int argc, char* argv[])
         }
 
         if (0 == size) {
+            // refer to README.md about server close connection
             printf("server has closed connection\n");
             printf("client retry to connect server\n");
         }
