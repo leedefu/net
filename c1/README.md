@@ -1,6 +1,8 @@
 ./daytime_client time.nist.gov  
 58700 19-08-05 07:32:10 50 0 0 646.8 UTC(NIST) *  
 
+Only the root user is allowed to bind to ports <= 1024. Every ports > 1024 can be bound to by normal users.  
+sudo ./daytime_server  
 ./daytime_client localhost  
 Mon Aug  5 18:01:10 2019
 
