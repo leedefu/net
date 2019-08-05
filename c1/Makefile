@@ -7,9 +7,12 @@ CPPFLAGS = -std=c++0x -c -Wall -g
 LIB =
 INCLUDE =
 
-all:daytime
+all:daytime_client daytime_server
 
-daytime: main.o
+daytime_client: daytime_client.o
+	$(CPP) $(LIB) $(INCLUDE) $^ -o $@
+
+daytime_server: daytime_server.o
 	$(CPP) $(LIB) $(INCLUDE) $^ -o $@
 
 .c.o:
@@ -19,4 +22,4 @@ daytime: main.o
 	$(CPP) $(CPPFLAGS) $(INCLUDE) -c $<
 
 clean:
-	rm -rf *.o daytime
+	rm -rf *.o daytime_client daytime_server
